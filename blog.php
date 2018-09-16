@@ -23,14 +23,14 @@
 
     if (isset($_POST['search'])) {
         $search = $_POST['search-title'];
-        $all_posts_query = "SELECT * FROM posts WHERE status = 'publish'";
+        $all_posts_query = "SELECT * FROM posts WHERE status = 'publico'";
         $all_posts_query .= " and tags LIKE '%$search%'";
         $all_posts_run = mysqli_query($con, $all_posts_query);
         $all_posts = mysqli_num_rows($all_posts_run);
         $total_pages = ceil($all_posts / $number_of_posts);
         $posts_start_from = ($page_id - 1) * $number_of_posts;
     } else {
-        $all_posts_query = "SELECT * FROM posts WHERE status = 'publish'";
+        $all_posts_query = "SELECT * FROM posts WHERE status = 'publico'";
         if (isset($cat_name)) {
             $all_posts_query .= " and categories = '$cat_name'";
         }
@@ -49,7 +49,7 @@
             <div class="row">
                 <div class="col-md-8">
                     <?php
-                    $slider_query = "SELECT * FROM posts WHERE status = 'publish' ORDER BY id DESC LIMIT 5";
+                    $slider_query = "SELECT * FROM posts WHERE status = 'publico' ORDER BY id DESC LIMIT 5";
                     $slider_run = mysqli_query($con, $slider_query);
                     if (mysqli_num_rows($slider_run) > 0) {
                         $count = mysqli_num_rows($slider_run);
@@ -105,11 +105,11 @@
                 }
                 if (isset($_POST['search'])) {
                     $search = $_POST['search-title'];
-                    $query = "SELECT * FROM posts WHERE status = 'publish'";
+                    $query = "SELECT * FROM posts WHERE status = 'publico'";
                     $query .= " and tags LIKE '%$search%'";
                     $query .= " ORDER BY id DESC LIMIT $posts_start_from, $number_of_posts";
                 } else {
-                    $query = "SELECT * FROM posts WHERE status = 'publish'";
+                    $query = "SELECT * FROM posts WHERE status = 'publico'";
                     if (isset($cat_name)) {
                         $query .= " and categories = '$cat_name'";
                     }

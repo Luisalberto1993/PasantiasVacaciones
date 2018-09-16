@@ -104,7 +104,7 @@ $session_author_image = $_SESSION['author_image'];
                                                         echo "<option value='" . $cat_name . "' " . ((isset($categories) and $categories == $cat_name) ? "selected" : "") . ">" . ucfirst($cat_name) . "</option>";
                                                     }
                                                 } else {
-                                                    echo "<cetner><h6>Categoría no disponible</h6></center>";
+                                                    echo "<center><h6>Categoría no disponible</h6></center>";
                                                 }
                                                 ?>
                                             </select>

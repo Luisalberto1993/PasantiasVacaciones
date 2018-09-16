@@ -26,12 +26,12 @@ if (isset($_GET['del'])) {
     }
 }
 
-if (isset($_GET['approve'])) {
-    $approve_id = $_GET['approve'];
+if (isset($_GET['aprobado'])) {
+    $approve_id = $_GET['aprobado'];
     $approve_check_query = "SELECT * FROM comments WHERE id = $approve_id";
     $approve_check_run = mysqli_query($con, $approve_check_query);
     if (mysqli_num_rows($approve_check_run) > 0) {
-        $approve_query = "UPDATE `comments` SET `status` = 'approve' WHERE `comments`.`id` = $approve_id";
+        $approve_query = "UPDATE `comments` SET `status` = 'aprobado' WHERE `comments`.`id` = $approve_id";
         if (isset($_SESSION['username']) && $_SESSION['role'] == 'admin') {
             if (mysqli_query($con, $approve_query)) {
                 $msg = "Comentario ha sido aceptado";
@@ -44,12 +44,12 @@ if (isset($_GET['approve'])) {
     }
 }
 
-if (isset($_GET['unapprove'])) {
-    $unapprove_id = $_GET['unapprove'];
+if (isset($_GET['noAprobado'])) {
+    $unapprove_id = $_GET['noAprobado'];
     $unapprove_check_query = "SELECT * FROM comments WHERE id = $unapprove_id";
     $unapprove_check_run = mysqli_query($con, $unapprove_check_query);
     if (mysqli_num_rows($unapprove_check_run) > 0) {
-        $unapprove_query = "UPDATE `comments` SET `status` = 'pending' WHERE `comments`.`id` = $unapprove_id";
+        $unapprove_query = "UPDATE `comments` SET `status` = 'pendiente' WHERE `comments`.`id` = $unapprove_id";
         if (isset($_SESSION['username']) && $_SESSION['role'] == 'admin') {
             if (mysqli_query($con, $unapprove_query)) {
                 $msg = "Comentario ha sido cancelado";
@@ -71,11 +71,11 @@ if (isset($_POST['checkboxes'])) {
         if ($bulk_option == 'delete') {
             $bulk_del_query = "DELETE FROM `comments` WHERE `comments`.`id` = $user_id";
             mysqli_query($con, $bulk_del_query);
-        } else if ($bulk_option == 'approve') {
-            $bulk_author_query = "UPDATE `comments` SET `status` = 'approve' WHERE `comments`.`id` = $user_id";
+        } else if ($bulk_option == 'aprobado') {
+            $bulk_author_query = "UPDATE `comments` SET `status` = 'aprobado' WHERE `comments`.`id` = $user_id";
             mysqli_query($con, $bulk_author_query);
-        } else if ($bulk_option == 'pending') {
-            $bulk_admin_query = "UPDATE `comments` SET `status` = 'pending' WHERE `comments`.`id` = $user_id";
+        } else if ($bulk_option == 'pendiente') {
+            $bulk_admin_query = "UPDATE `comments` SET `status` = 'pendiente' WHERE `comments`.`id` = $user_id";
             mysqli_query($con, $bulk_admin_query);
         }
     }
@@ -98,12 +98,12 @@ if (isset($_POST['checkboxes'])) {
                         <li class="active"><i class="fa fa-comments"></i> Comentarios</li>
                     </ol>
                     <?php
-                    if (isset($_GET['reply'])) {
-                        $reply_id = $_GET['reply'];
+                    if (isset($_GET['reenviar'])) {
+                        $reply_id = $_GET['reenviar'];
                         $reply_check = "SELECT * FROM comments WHERE post_id = $reply_id";
                         $reply_check_run = mysqli_query($con, $reply_check);
                         if (mysqli_num_rows($reply_check_run) > 0) {
-                            if (isset($_POST['reply'])) {
+                            if (isset($_POST['reenviar'])) {
                                 $comment_data = $_POST['comment'];
                                 if (empty($comment_data)) {
                                     $comment_error = "Must Fill This Feild";
@@ -118,7 +118,7 @@ if (isset($_POST['checkboxes'])) {
                                     $email = $get_user_row['email'];
                                     $image = $get_user_row['image'];
 
-                                    $insert_comment_query = "INSERT INTO comments (date,name,username,post_id,email,image,comment,status) VALUES ('$date','$full_name','$session_username','$reply_id','$email','$image','$comment_data','approve')";
+                                    $insert_comment_query = "INSERT INTO comments (date,name,username,post_id,email,image,comment,status) VALUES ('$date','$full_name','$session_username','$reply_id','$email','$image','$comment_data','aprobado')";
                                     if (mysqli_query($con, $insert_comment_query)) {
                                         $comment_msg = "Comentario ha sido enviado";
                                         header('location: comments.php');
@@ -142,7 +142,7 @@ if (isset($_POST['checkboxes'])) {
                                             ?>
                                             <textarea name="comment" id="comment" cols="30" rows="10" placeholder="Su comentario aquí" class="form-control"></textarea>
                                         </div>
-                                        <input type="submit" name="reply" class="btn btn-primary">
+                                        <input type="submit" name="reenviar" class="btn btn-primary">
                                     </form>
                                 </div>
                             </div>
@@ -164,8 +164,8 @@ if (isset($_POST['checkboxes'])) {
                                                 <select name="bulk-options" id="" class="form-control">
                                                     <option value="">Seleccionar</option>
                                                     <option value="delete">Eliminar</option>
-                                                    <option value="approve">Aceptar</option>
-                                                    <option value="pending">Cancelar</option>
+                                                    <option value="aprobado">Aceptar</option>
+                                                    <option value="pendiente">Cancelar</option>
                                                 </select>
                                             </div>
                                         </div>
@@ -217,15 +217,15 @@ if (isset($_POST['checkboxes'])) {
                                             <td><?php echo $username; ?></td>
                                             <td><?php echo $comment; ?></td>
                                             <td><span style="color:<?php
-                                                if ($status == 'approve') {
+                                                if ($status == 'aprobado') {
                                                     echo 'green';
-                                                } else if ($status == 'pending') {
+                                                } else if ($status == 'pendiente') {
                                                     echo 'red';
                                                 }
                                                 ?>;"><?php echo ucfirst($status); ?></span></td>
-                                            <td><a href="comments.php?approve=<?php echo $id; ?>">   <i class="far fa-check-circle"></i> </a></td>
-                                            <td><a href="comments.php?unapprove=<?php echo $id; ?>">  <i class="fas fa-backspace"></i>  </a></td>
-                                            <td><a href="comments.php?reply=<?php echo $post_id; ?>"><i class="fa fa-reply"></i></a></td>
+                                            <td><a href="comments.php?aprobado=<?php echo $id; ?>">   <i class="far fa-check-circle"></i> </a></td>
+                                            <td><a href="comments.php?noAprobado=<?php echo $id; ?>">  <i class="fas fa-backspace"></i>  </a></td>
+                                            <td><a href="comments.php?reenviar=<?php echo $post_id; ?>"><i class="fa fa-reply"></i></a></td>
                                             <td><a href="comments.php?del=<?php echo $id; ?>"><i class="fas fa-trash-alt"></i></a></td>
                                         </tr>
                                     <?php } ?>

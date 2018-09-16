@@ -9,7 +9,7 @@ if (isset($_GET['post_id'])) {
     $views_query = "UPDATE `posts` SET `views` = views + 1 WHERE `posts`.`id` = $post_id";
     mysqli_query($con, $views_query);
 
-    $query = "SELECT * FROM posts WHERE status = 'publish' and id = $post_id";
+    $query = "SELECT * FROM posts WHERE status = 'publico' and id = $post_id";
     $run = mysqli_query($con, $query);
     if (mysqli_num_rows($run) > 0) {
         $row = mysqli_fetch_array($run);
@@ -64,7 +64,7 @@ if (isset($_GET['post_id'])) {
                     <h3><i class="far fa-images"></i>  Imagen relacionada</h3><hr>
                     <div class="row">
                         <?php
-                        $r_query = "SELECT * FROM posts WHERE status = 'publish' AND title LIKE '%$title%' LIMIT 3";
+                        $r_query = "SELECT * FROM posts WHERE status = 'publico' AND title LIKE '%$title%' LIMIT 3";
                         $r_run = mysqli_query($con, $r_query);
                         while ($r_row = mysqli_fetch_array($r_run)) {
                             $r_id = $r_row['id'];
@@ -101,7 +101,7 @@ if (isset($_GET['post_id'])) {
                     </div>
                 </div>
                 <?php
-                $c_query = "SELECT * FROM comments WHERE status = 'approve' and post_id = $post_id ORDER BY id DESC";
+                $c_query = "SELECT * FROM comments WHERE status = 'aprobado' and post_id = $post_id ORDER BY id DESC";
                 $c_run = mysqli_query($con, $c_query);
                 if (mysqli_num_rows($c_run) > 0) {
                     ?>
@@ -139,7 +139,7 @@ if (isset($_GET['post_id'])) {
                     if (empty($cs_name) or empty($cs_email) or empty($cs_comment)) {
                         $error_msg = "Los campos con (*) son requeridos";
                     } else {
-                        $cs_query = "INSERT INTO `comments` (`id`, `date`, `name`, `username`, `post_id`, `email`, `website`, `image`, `comment`, `status`) VALUES (NULL, '$cs_date', '$cs_name', 'user', '$post_id', '$cs_email', '$cs_website', 'unknown-picture.png', '$cs_comment', 'pending')";
+                        $cs_query = "INSERT INTO `comments` (`id`, `date`, `name`, `username`, `post_id`, `email`, `website`, `image`, `comment`, `status`) VALUES (NULL, '$cs_date', '$cs_name', 'user', '$post_id', '$cs_email', '$cs_website', 'unknown-picture.png', '$cs_comment', 'pendiente')";
                         if (mysqli_query($con, $cs_query)) {
                             $msg = "Comentario enviado espere su Aprobación";
                             $cs_name = "";

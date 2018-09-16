@@ -12,6 +12,9 @@ $num_of_rows = mysqli_num_rows($get_comment_run);
     <a href="posts.php" class="list-group-item">
         <i class="fas fa-list-ul"></i> Noticias publicadas
     </a>
+    <a href="añadirPdf.php" class="list-group-item">
+        <i class="fas fa-list-ul"></i> Publicar Documento
+    </a>
     <!--                      <a href="media.php" class="list-group-item">
                               <i class="fa fa-database"></i> Imágenes
                           </a>-->
@@ -32,24 +35,7 @@ $num_of_rows = mysqli_num_rows($get_comment_run);
         <a href="users.php" class="list-group-item">
             <i class="fa fa-users"></i> Usuarios Registrados
         </a>
-        <!--        <a href="listados.php" class="list-group-item">
-                        <i class=""></i> Búsquedas
-                    </a>-->
-
-
-        <!--        <li class="dropdown" style="list-style: none">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"> <i class="fas fa-chart-pie"></i>
-                        Estadísticos <span class="caret"></span></a>
-                    <ul class="dropdown-menu">
-                        <li>
-                            <a href="listados.php" class="list-group-item">
-                                <i class="fas fa-chart-pie"></i> Vistas</a>
-                            <a href="listados.php" class="list-group-item">
-                                <i class="fas fa-chart-pie"></i> Porcentaje de User</a>
-        
-                        </li>
-                    </ul>
-                </li>-->
+  
 
         <a href="Estadis_noticias.php" class="list-group-item">
             <i class="fas fa-chart-pie"></i>  Estadistístico Noticias</a>

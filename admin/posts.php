@@ -33,14 +33,14 @@ if (isset($_POST['checkboxes'])) {
 
         $bulk_option = $_POST['bulk-options'];
 
-        if ($bulk_option == 'delete') {
+        if ($bulk_option == 'del') {
             $bulk_del_query = "DELETE FROM `posts` WHERE `posts`.`id` = $user_id";
             mysqli_query($con, $bulk_del_query);
-        } else if ($bulk_option == 'publish') {
-            $bulk_author_query = "UPDATE `posts` SET `status` = 'publish' WHERE `posts`.`id` = $user_id";
+        } else if ($bulk_option == 'publico') {
+            $bulk_author_query = "UPDATE `posts` SET `status` = 'publico' WHERE `posts`.`id` = $user_id";
             mysqli_query($con, $bulk_author_query);
-        } else if ($bulk_option == 'draft') {
-            $bulk_admin_query = "UPDATE `posts` SET `status` = 'draft' WHERE `posts`.`id` = $user_id";
+        } else if ($bulk_option == 'oculto') {
+            $bulk_admin_query = "UPDATE `posts` SET `status` = 'oculto' WHERE `posts`.`id` = $user_id";
             mysqli_query($con, $bulk_admin_query);
         }
     }
@@ -86,7 +86,7 @@ if (isset($_POST['checkboxes'])) {
                                                 <select name="bulk-options" id="" class="form-control">
 
                                                     <option value="">Seleccionar</option>
-                                                    <option value="delete">Eliminar</option>
+                                                    <option value="del">Eliminar</option>
                                                     <option value="publico">Estado Público</option>
                                                     <option value="oculto">Estado Oculto</option>
                                                 </select>

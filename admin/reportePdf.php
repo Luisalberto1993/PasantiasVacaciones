@@ -51,7 +51,7 @@ if (!isset($_SESSION['username'])) {
                     <style>
 
                         .contenedor-form{
-                            
+
                             padding-left: 35%;  
                         }
                         .contenedor-form input[type="submit"]{

@@ -16,9 +16,9 @@ if (isset($_GET['del'])) {
     if (isset($_SESSION['username']) and $_SESSION['role'] == 'admin') {
         $del_query = "DELETE FROM categories WHERE id = '$del_id'";
         if (mysqli_query($con, $del_query)) {
-            $del_msg = "Category Has Been Deleted";
+            $del_msg = "Categoría ha sido eliminada";
         } else {
-            $del_error = "Category Has not Been Deleted";
+            $del_error = "La categoría no ha sido eliminada";
         }
     }
 }
@@ -27,18 +27,18 @@ if (isset($_POST['submit'])) {
     $cat_name = mysqli_real_escape_string($con, strtolower($_POST['cat-name']));
 
     if (empty($cat_name)) {
-        $error = "Must Fill This Field";
+        $error = "Debe llenar este campo";
     } else {
         $check_query = "SELECT * FROM categories WHERE category = '$cat_name'";
         $check_run = mysqli_query($con, $check_query);
         if (mysqli_num_rows($check_run) > 0) {
-            $error = "Category Already Exist";
+            $error = "La categoría ya existe";
         } else {
             $insert_query = "INSERT INTO categories (category) VALUES ('$cat_name')";
             if (mysqli_query($con, $insert_query)) {
-                $msg = "Category Has Been Added";
+                $msg = "Categoría ha sido agregada";
             } else {
-                $error = "Category Has not Been Added";
+                $error = "Categoría no ha sido agregada";
             }
         }
     }
@@ -48,18 +48,18 @@ if (isset($_POST['update'])) {
     $cat_name = mysqli_real_escape_string($con, strtolower($_POST['cat-name']));
 
     if (empty($cat_name)) {
-        $up_error = "Must Fill This Field";
+        $up_error = "Debe llenar este campo";
     } else {
         $check_query = "SELECT * FROM categories WHERE category = '$cat_name'";
         $check_run = mysqli_query($con, $check_query);
         if (mysqli_num_rows($check_run) > 0) {
-            $up_error = "Category Already Exist";
+            $up_error = "La categoría ya existe";
         } else {
             $update_query = "UPDATE `categories` SET `category` = '$cat_name' WHERE `categories`.`id` = $edit_id";
             if (mysqli_query($con, $update_query)) {
-                $up_msg = "Category Has Been Updated";
+                $up_msg = "Categoría ha sido agregada";
             } else {
-                $up_error = "Category Has not Been Updated";
+                $up_error = "Categoría no ha sido agregada";
             }
         }
     }
@@ -111,7 +111,7 @@ if (isset($_POST['update'])) {
 
                                     <form action="" method="post">
                                         <div class="form-group">
-                                            <label for="category">Actualizar Nombre de Categoría:</label>
+                                            <label for="category">Actualizar Categoría:</label>
                                             <?php
                                             if (isset($up_msg)) {
                                                 echo "<span class='pull-right' style='color:green;'>$up_msg</span>";
@@ -168,7 +168,7 @@ if (isset($_POST['update'])) {
                                 </table>
                                 <?php
                             } else {
-                                echo "<center><h3>No Categories Found</h3></center>";
+                                echo "<center><h3>No se encontraron categorías</h3></center>";
                             }
                             ?>
                         </div>
