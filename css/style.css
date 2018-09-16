@@ -1,0 +1,521 @@
+/*es el estilo del blog*/
+
+html, body{
+    margin:0;
+    font-size: 100%;
+    font-family: 'Lato', sans-serif;
+    background: #f0f0f0; /*color gris de la pagina*/
+}
+body a {
+    text-decoration:none;
+    transition:0.5s all;
+    -webkit-transition:0.5s all;
+    -moz-transition:0.5s all;
+    -o-transition:0.5s all;
+    -ms-transition:0.5s all;
+}
+.container{
+
+    font-family: 'Lato', sans-serif;
+}
+.carousel-control{
+    color: #f36715;
+    /*    border: 1px solid;*/
+    padding: 10px;
+    /*    box-shadow: 5px 10px #888888;*/
+
+}
+.carousel-control:hover,:focus{
+    color: #f36715;
+    /*    border: 1px solid;*/
+    padding: 10px;
+    /*    box-shadow: 5px 10px #888888;*/
+
+}
+
+/*a{
+    color:#f36715;
+}
+
+a:hover{
+    color:#f36715;
+}*/
+
+
+
+
+
+/*para efectos del boton leer mas*/
+a.btn-primary{
+    background-color: #f36715;
+    box-shadow: 2px 5px #ccc5c5;
+    border-color: white;
+    border-radius: 2px;
+}
+a.btn-primary:hover{
+    background-color: rgba(243, 103, 21, .7);
+    box-shadow: 2px 5px #ccc5c5;
+    border-color: white;
+    border-radius: 2px;
+}
+
+/*para efectos del boton leer mas*/
+
+
+
+/*para efectos de la paginacion*/
+.pagination>.active>a, .pagination>.active>a:focus, .pagination>.active>a:hover, .pagination>.active>span, .pagination>.active>span:focus, .pagination>.active>span:hover {
+    z-index: 3;
+    color: #000000;
+    cursor: default;
+    background: rgba(243, 103, 21, .4);
+    border-color: rgba(243, 103, 21, .5);
+}
+
+
+ul.pagination{
+    background-color: #f0f0f0;
+    box-shadow: 2px 5px #ccc5c5;
+}
+.pagination>li>a{
+    background-color:transparent;
+}
+/*para efectos de la paginacion*/
+
+
+.navbar-brand img{
+    margin-top:-5px;
+}
+
+.navbar-brand *{
+    color:white;
+}
+
+.jumbotron{
+    height: 200px;
+    overflow: hidden;
+}
+
+.jumbotron #details{
+    position: absolute;
+    color:white;
+}
+
+.jumbotron #details span{
+    color:#f36715;
+}
+
+.jumbotron img{
+    width:100%;
+}
+
+/*para el color del buscar*/ 
+.form-control{
+    
+    color: #333;
+}
+/*para el color del buscar*/ 
+
+
+
+/*efectos para los widge*/
+/*section .widgets{
+    margin-bottom:20px; para el espacio entre el buscar y la opcion destacados
+}*/
+.widgets{
+    margin-bottom:20px; /*para el espacio entre el buscar y la opcion destacados*/
+}
+
+.popular{
+    background:white;
+    padding:20px;
+    border-radius: 10px;
+    border:1px solid white;
+}
+/*.popular.list-group{
+    background-color: red;
+    
+}*/
+
+.popular .details{
+    margin-left:-20px;
+    font-size: 30px;
+    font-family: 'Lato', sans-serif;
+}
+.popular .details a{
+    /*margin-left:-20px;*/
+    text-align: center; /*centraado de los enlaces del destacados*/
+    font-family: 'Lato', sans-serif;
+}
+.details a{
+    font-size: 30px;
+
+}
+
+.popular .details p{
+    font-family: 'Lato', sans-serif;
+    font-size: 13px; /*tamaño de la letra de la fecha del sidebar*/
+    text-align: center;
+}
+
+.popular img{
+    width:100%;
+    margin-top:12px;
+}
+
+.popular ul li{
+    list-style: cross-fade;
+    /*padding: -4px;*/
+}
+
+.categories{
+    background:white;
+    padding:20px;
+    border-radius: 10px;
+    border:1px solid #E3E3E3;
+    /*box-shadow: 2px 4px red;*/
+}
+
+.post{
+    background: white;
+    border:1px solid #E3E3E3;
+    margin: 15px 0px;
+}
+
+.post .post-date{
+    padding: 20px;
+    text-align: center;
+}
+
+.post .post-date .day{
+    font-size: 30px;
+    color:#24A7CF;
+}
+
+.post .post-date .year{
+    font-weight: 100;
+}
+
+.post .post-title{
+    padding:5px 20px 25px 20px;
+    border-left:1px solid #E3E3E3;
+}
+
+.post .post-title span{
+    color:#24A7CF;
+    font-weight: 100;
+    margin-left: 10px;
+}
+
+.post .profile-picture{
+    padding: 20px;
+}
+
+.post .profile-picture img{
+    width: 80%;
+}
+
+.post > a > img{
+    width:100%;
+}
+
+.post .desc{
+        /*font-family: fantasy;*/
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+    padding: 15px;
+    line-height: 20px;
+}
+
+.post > a.btn{
+    margin-left: 15px;
+    margin-bottom: 40px;
+}
+
+.post .bottom{
+    padding:10px 20px;
+    border-top:1px solid #E3E3E3;
+}
+
+.post .bottom{
+    color:#C6C6C6;
+}
+
+.post .bottom .first{
+    margin-right: 20px;
+}
+
+.post .bottom .sec{
+    margin-left: 20px;
+}
+
+nav#pagination{
+    text-align: center;
+}
+
+.pagination > li > a{
+    color:#f36715;
+    padding:15px 25px;
+    font-size: 18px;
+}
+
+
+footer{
+    background:black;
+    height:50px;
+    line-height: 50px;
+    color: white;
+    letter-spacing: 1px;
+}
+
+.contact-form{
+    background: white;
+    padding: 50px 25px;
+}
+
+.contact-form h2{
+    color:#24A7CF;
+}
+
+.contact-form textarea{
+    resize: none;
+}
+
+.related-posts{
+    background: white;
+    padding: 10px 20px;
+    margin-bottom: 15px;
+}
+
+.related-posts img{
+    width: 100%;
+}
+
+.related-posts h3{
+    color:#f36715;
+}
+
+/*para el autor del post*/
+
+.author{
+    background: white;
+    padding: 20px;
+    margin-bottom: 15px;
+}
+
+.author img{
+    width: 100%;
+}
+
+.author h4{
+    color:#f36715;
+    text-decoration: underline;
+}
+
+.author p{
+    font-weight: 100;
+}
+
+.comment{
+    background: white;
+    padding: 20px;
+    margin-bottom: 15px;
+}
+
+.comment h3{
+    color:#333;
+}
+
+.comment img{
+    width: 80%;
+}
+
+.comment h4{
+    color:#333;
+}
+
+.comment p{
+    font-weight: 100;
+}
+
+.comment .single-comment{
+    margin-bottom: 10px;
+}
+
+.comment-box{
+    margin-bottom: 15px;
+    background: white;
+    padding: 20px;
+}
+
+.comment-box textarea{
+    resize: none;
+}
+
+
+
+
+@media (max-width:992px) {
+
+    .post .profile-picture{
+        text-align: center;
+        margin-top:-40px;
+    }
+
+    .post .post-title{
+        text-align: center;
+        border:none;
+    }
+
+    .post .profile-picture img{
+        width:20%;
+    }
+
+}
+
+@media (max-width:786px){
+
+    .jumbotron #details{
+        margin-top: 20px;
+    }
+
+    .post .post-title{
+        margin-top: -30px;
+        text-align: center;
+        border: none;
+    }
+
+    .post .profile-picture{
+        text-align: center;
+    }
+
+    .post .profile-picture img{
+        width:20%;
+    }
+
+    .pagination > li > a{
+        font-size: 13px;
+        padding:10px 12px;
+    }
+
+    footer{
+        font-size: 9px;
+        letter-spacing: 0px;
+    }
+
+    .navbar-inverse .navbar-nav > li > a{
+        text-align: center;
+    }
+
+    .navbar-inverse .navbar-nav .open .dropdown-menu > li > a{
+        text-align: center;
+    }
+
+    .author{
+        background: white;
+        padding: 20px;
+        margin-bottom: 15px;
+        text-align: center;
+    }
+
+    .author img{
+        width: 30%;
+    }
+
+    .author h4{
+        color:#24A7CF;
+        text-decoration: underline;
+    }
+
+    .author p{
+        font-weight: 100;
+    }
+
+    .comment{
+        background: white;
+        padding: 20px;
+        margin-bottom: 15px;
+    }
+
+    .comment h3{
+        color:#333;
+    }
+
+    .comment img{
+        width: 30%;
+    }
+
+    .comment h4{
+        color:#333;
+    }
+
+    .comment p{
+        font-weight: 100;
+    }
+
+    .comment .single-comment{
+        margin-bottom: 10px;
+        text-align: center;
+    }
+}
+
+
+/*para el carrousel del blog de informacion*/
+.carousel{
+    text-align: center;
+}
+.carousel.item >img{
+    display: inline-block;
+}
+.carousel{
+    min-height: 400px;
+    color: red;
+}
+.carousel{
+    position: relative;
+}
+.carousel-caption h2{
+    background-color: transparent;
+
+}
+
+/*para el carrousel del blog de informacion*/
+
+/*para el boton de enviar en los post*/
+.btn-primary{
+
+    color: #fff;
+    background-color: #f36715;
+    border-color: #f36715;
+}
+.btn-primary:hover{
+
+    color: #fff;
+    background-color: rgba(243, 103, 21, .5);
+    border-color: rgba(243, 103, 21, .5);
+}
+
+.btn {
+    /*margin-bottom: 40%;*/
+    display: inline-block;
+    padding: 8px 14px;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: 400;
+    font-family: 'Lato', sans-serif;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+
+/*para el boton de enviar en los post*/
+
+

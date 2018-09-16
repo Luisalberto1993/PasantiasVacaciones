@@ -1,0 +1,67 @@
+https://www.youtube.com/watch?v=N_U62iplbo0&list=PLXFM4wDu-CQa2DjmfU2aOqBKWHI0Q_wpk&index=2
+
+
+ya en el servidor la contraseña es 
+1305Luis1993@@. para la cuenta 
+y la base de datos 
+es del 1 -8
+
+
+https://mdbootstrap.com/previews/free-templates/full-page-video-carousel/
+
+babar786 - 1234
+luis123- 1234
+david123 - 1234
+
+para el buscador 
+
+<?php require_once './inc/top.php';
+$palabra = $_POST['palabra'];
+$query = "SELECT *FROM users WHERE username LIKE '%$palabra%'";
+$consulta = mysqli_query($con, $query);
+if (mysqli_num_rows($consulta) >0) {
+    $count = mysqli_num_rows($consulta);
+    ?>
+    <h3>Usuarios mostrados</h3>
+    <table class="table table-hover table-striped">
+        <thead>
+            <tr>
+                <th>Id #</th>
+                <th>Fecha</th>
+                <th>Nombre</th>
+                <th>Usuario</th>
+                <th>Rol</th>
+            </tr>
+        </thead>
+        <tbody>
+            <?php
+            while ($fila = mysqli_fetch_array($consulta)) {
+                $users_id = $fila['id'];
+                $users_date = getdate($fila['date']);
+                $users_day = $users_date['mday'];
+                $users_month = substr($users_date['month'], 0, 3);
+                $users_year = $users_date['year'];
+                $users_firstname = $fila['first_name'];
+                $users_lastname = $fila['last_name'];
+                $users_fullname = "$users_firstname $users_lastname";
+                $users_username = $fila['username'];
+                $users_role = $fila['role'];
+                ?>
+                <tr>
+                    <td><?php echo $users_id; ?></td>
+                    <td><?php echo "$users_day $users_month $users_year"; ?></td>
+                    <td><?php echo $users_fullname; ?></td>
+                    <td><?php echo ucfirst($users_username); ?></td>
+                    <td><?php echo ucfirst($users_role); ?></td>
+                </tr>
+            <?php } ?>
+        </tbody>
+    </table>
+
+
+
+    <?php
+} else {
+    echo 'no hemos econtrado busquedas con ' . $palabra;
+}
+?>

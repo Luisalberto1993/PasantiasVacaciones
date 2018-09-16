@@ -1,0 +1,329 @@
+
+/*para el fondo en la seccion contacto*/
+.contact{
+    background: url('../images/4.JPG');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-size: cover; /*para que abarque el 100% de la pantalla*/
+    background-attachment: fixed; /*para que este estatico la imagen*/
+    font-family: 'Federo', sans-serif;
+
+    background-color: #f0f0f0;
+
+}
+
+/*para el fondo en la seccion contacto*/
+
+
+h2{
+    font-size: 3em;
+    color: #000;
+    /*font-weight: 300;*/
+    letter-spacing: 3px;
+    margin-bottom: 1em;
+    text-align: center;  
+    text-transform: capitalize;
+    font-family: 'Federo', sans-serif;
+
+}
+h3{
+
+    font-family: 'Lato', sans-serif;
+    color:#333;
+    /*font-weight:600;*/
+    /*line-height:1.4;*/
+    /*letter-spacing: 1px;*/
+}
+h4{
+
+    font-family: 'Federo', sans-serif;
+    color:#5d5e60;
+    /*font-weight:600;*/
+    /*line-height:1.4;*/
+    /*letter-spacing: 1px;*/
+}
+h5{
+    font-family: 'Lato', sans-serif;
+    color:#5d5e60;
+
+}
+h6{
+    font-family: 'Lato', sans-serif;
+    color:#5d5e60;
+
+}
+/*h2,h3,h4,h5,h6 {
+    color:#333;
+    line-height:1.4;
+    font-weight:600;
+    font-family: 'Federo', sans-serif;
+}*/
+
+a,a:hover {
+    color:#f36715 ;
+    text-decoration: none;
+}
+
+
+@media (max-width: 655px) {
+    .collapse {background: #333;}
+    .navbar.navbar-inverse.navbar-static-top a {padding: 15px 16px;line-height: 15px;font-size: 13px;}
+}
+/* --- Intro --- */
+header {
+    padding-bottom:50px;
+}
+.intro {
+    font-family:'Playball',cursive;
+    font-size:60px;
+    line-height:1.0;
+    font-weight: 900;
+}
+
+.intro a {
+    color:#000;
+}
+
+/* --- Parallax --- */
+.parallax {
+    text-align:center;
+    background-position:center center;
+    background-repeat:no-repeat;
+    background-size:cover;
+    background-attachment:fixed !important;
+    overflow:hidden;
+}
+.parallax-pattern-overlay {
+    background-image:url(../img/pattern.png);
+    background-repeat: repeat;
+}
+
+
+/* --- Heading --- */
+.heading {
+    padding-bottom:15px;
+    text-align:center;
+    max-width:960px;
+    margin:0px auto;
+    padding-top:80px;
+}
+.heading h2 {
+    font-weight:700;
+    font-family: 'Federo', sans-serif;
+    font-size:35px;
+    color:#333;
+    margin:0;
+    padding:5px;
+}
+.heading h2::first-letter {
+    color:#333 ;
+}
+.heading h3 {
+    font-size:16px;
+    line-height:1.7;
+}
+
+
+/* --- Contact --- */
+/* --- Map --- */
+.map{
+    position:relative;
+    margin-top:50px;
+    margin-bottom:40px;
+    background-color: transparent;
+}
+
+/* google map */
+#google-map{
+    position:relative;
+    height: 400px;
+    width:600px;
+}
+
+.contact-info {
+    margin-top:40px;
+}
+
+.contact-info p {
+    color:#333;
+}
+
+.contact-info ul {
+    color:#333;
+    list-style:none;
+    margin-left:-40px;
+}
+
+.contact-info ul li {
+    margin-top:20px;
+    margin-bottom:20px;
+    margin-left:38px;
+}
+
+.contact-info i {
+    color:#f36715;	
+}
+
+
+.validation {
+    color: red;
+    display:none;
+    margin: 0 0 20px;
+    font-weight:400;
+    font-size:13px;
+}
+
+#sendmessage {
+    color: green;
+    border:1px solid green;
+    display:none;
+    text-align:center;
+    padding:15px;
+    font-weight:600;
+    margin-bottom:15px;
+}
+
+#errormessage {
+    color: red;
+    display:none;
+    border:1px solid red;
+    text-align:center;
+    padding:15px;
+    font-weight:600;
+    margin-bottom:15px;
+}
+
+#sendmessage.show, #errormessage.show, .show {
+    display:block;
+}
+
+input.contact {
+    background:#e1e5e8;
+    border:solid 1px #ddd;
+    color:#000;
+    padding:15px 15px;
+
+    margin-right:3%;
+    margin-bottom:30px;
+    outline:none;
+}
+input.contact.noMarr {
+    margin-right:0px;
+}
+textarea.contact {
+    background:#fff;
+    color:#000;
+    border:solid 1px #ddd;
+    padding:15px 30px;
+
+    margin-bottom:40px;
+    outline:none;
+    height:150px;
+}
+.contact.submit {
+    background:#333;
+    font-family: 'Lato', sans-serif;
+    color:#fff;
+    font-size:16px;
+    font-weight:400;
+    text-align:center;
+    padding: 15px;
+    margin:0px;
+    border:none !important;
+    border-radius:3px;
+}
+.contact.submit:hover {
+    background:#f36715 ;
+}
+.done {
+    display:none;
+}
+.error input,input.error,.error textarea,textarea.error {
+    background-color:#ffffff;
+    border:1px solid red !Important;
+    -webkit-transition:border linear 0.2s,box-shadow linear 0.2s;
+    -moz-transition:border linear 0.2s,box-shadow linear 0.2s;
+    -o-transition:border linear 0.2s,box-shadow linear 0.2s;
+    transition:border linear 0.2s,box-shadow linear 0.2s;
+}
+@media screen and (min-width:768px) {
+    input.contact.col-md-6 {
+        width: 48.5%;
+    }
+}
+/* --- Footer --- */
+.footer {
+    background:#f36715 ;
+    margin-top:120px;
+    position:relative;
+    margin-right:-15px;
+}
+.footer .container {
+    padding:60px 0 20px;
+}
+.footer ul {
+    margin:0 auto;
+    margin-bottom:30px;
+    margin-top:10px;
+    text-align:center;
+    list-style-type:none;
+    padding-left:0;
+}
+.footer ul li {
+    display:inline-block;
+    text-align:center;
+    background:rgba(0,0,0,0.2);
+    color:#ffffff;
+    line-height:45px;
+    margin:0 4px 0px;
+    width:45px !important;
+    height:45px !important;
+    -webkit-border-radius:3px;
+    border-radius:3px;
+}
+.footer ul li:hover {
+    background:#2a2a2a;
+}
+.footer ul li:hover	a {
+    color:#fff;
+}
+.footer ul li a {
+    color:#fff;
+    width:42px !important;
+    height:42px !important;
+}
+.footer ul li a i {
+    line-height:45px;
+    color:#fff;
+}
+.footer p {
+    color:#fff;
+    font-size:13px;
+    line-height:24px;
+    font-weight:300;
+    text-align:center;
+    text-transform:uppercase;
+    font-family: 'Federo', sans-serif;
+}
+.gototop {
+    display:inline-block;
+    width:60px;
+    height:60px;
+    background:#fff;
+    position:absolute;
+    margin-left:-30px;
+    top:-35px;
+    border-radius:50%;
+}
+.gototop i {
+    color:#92DD03 ;
+    line-height:70px;
+}
+.footer a,.footer a:hover {
+    color:#fff;
+    font-family: 'Lato', sans-serif;
+}
+.credits {
+    text-align: center;
+}
+

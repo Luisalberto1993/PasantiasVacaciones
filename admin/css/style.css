@@ -1,0 +1,150 @@
+
+
+html,body{
+    height: 100%;
+    font-family: 'Federo', sans-serif;
+}
+
+body{
+    padding-top: 60px;
+    font-family: 'Federo', sans-serif;
+}
+
+body#profile img#profile-image{
+    -webkit-box-shadow: 0px 0px 16px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 16px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 16px 0px rgba(0,0,0,0.75);
+}
+
+.huge{
+    font-size: 40px;
+}
+
+.tag-boxes .panel-primary{
+    border: 1px solid #f36715;
+}
+
+.tag-boxes .panel-red{
+    color:white;
+    background:#d9534f;
+}
+
+.tag-boxes .panel-red a{
+    color:#d9534f;
+}
+
+.tag-boxes .panel-red a:hover{
+    color:#b52b27;
+}
+
+.tag-boxes .panel-yellow{
+    color:white;
+    background:#f0ad4e;
+}
+
+.tag-boxes .panel-yellow a{
+    color:#f0ad4e;
+}
+
+.tag-boxes .panel-yellow a:hover{
+    color:#df8a13;
+}
+
+.tag-boxes .panel-green{
+    color:white;
+    background:#5cb85c;
+}
+
+.tag-boxes .panel-green a{
+    color:#5cb85c;
+}
+
+.tag-boxes .panel-green a:hover{
+    color:#3d8b3d;
+}
+
+#wrapper{
+    min-height: 100%;
+    position: relative;
+}
+
+.body-section{
+    padding-bottom: 70px;
+}
+
+footer{
+    background:#f36715;
+    color:white;
+    height: 50px;
+    line-height: 50px;
+    font-size: 12px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+footer a{
+    color:white;
+    font-weight: bold;
+}
+
+footer a:hover{
+    color:white;
+    text-decoration: underline;
+}
+
+.list-group-item{
+    background-color: #f4f1ed;
+
+}
+/*para llamar una clase dentro de otra*/
+.list-group-item.active{
+    background-color: #f36715;
+    border-color: #f36715;
+    /*color: red !important;*/
+    z-index: 200;
+
+}
+
+.list-group-item.active:hover{
+    background-color: rgba(243, 103, 21, .8);
+    border-color: #f7a82a;
+    /*color: red !important;*/
+    z-index: 200;
+
+}
+
+.navbar{
+    background-color: rgb(243, 103, 21); 
+    border-color: #e5870d;
+    color: red !important;
+
+}
+.navbar-toggle{
+    background-color: rgb(243, 103, 21);
+
+}
+.navbar-brand{
+    background-color: rgb(243, 103, 21);
+}
+.navbar-collapse.navbar-right{
+    background-color: rgb(243, 103, 21);
+
+}
+.navbar-right{
+    background-color: rgb(243, 103, 21);  
+
+}
+.navbar-right a:hover,
+.navbar-right a:focus{
+    background-color: rgba(243, 103, 21, .7);  
+
+}
+
+.navbar-default .navbar-collapse {
+    background-color: rgb(243, 103, 21);
+    border-color:rgb(243, 103, 21);
+}
+
+
+

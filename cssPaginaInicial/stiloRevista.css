@@ -1,0 +1,283 @@
+/*section#imagenes-modal{
+    
+    margin: 0;
+    padding: 50px 2.5px;
+    width: 95%;
+    height: 200px;
+    background-color: #56023a;
+}
+
+div.modal-reposo{
+    
+    margin: 0;
+    padding: 0;
+    width: 16.60%;
+    height: auto;
+    overflow: hidden;
+    transition: all 0.1s;
+    float: left;
+    
+}
+div.modal-activo{
+    position: absolute;
+    left: 0;
+    z-index: 2000;
+    margin: 0;
+    padding: 100px 15%;
+    width: 70%;
+    overflow: hidden;
+    border-radius: 0;
+    background-color: rgba(0,0,0, 0.6);
+    float: left;
+}
+div.modal-reposo:hover{
+    
+    border-radius: 50%;
+}
+div.modal-reposo img{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    border-radius: 0;
+    height: auto;
+}
+div.modal-reposo h1, div.modal-reposo h2, div.modal-reposo p{
+    
+    display: none;
+}
+div.info-modal-activo{
+    margin: 0 auto;
+    padding: 50px;
+    width: 80%;
+    height: auto;
+    border-radius: 0;
+    background-color: #eee;
+        
+}
+div.info-modal-activo p.alin-dcha{
+    float: right;
+    cursor: pointer;
+}
+div.modal-activo p.alin-dcha span{
+    font-size: 2em;
+    color: #333;
+    margin: 0;
+    padding: 0 10px 2.5px 10px;
+    width: 15px;
+    height: 10px;
+    border-radius: 5px;
+}
+div.info-modal-activo p.alin-dcha span:hover{
+    
+    background-color: #a00;
+    color: #eee;
+}
+div.info-modal-activo img{
+    margin: 0;
+    padding: 0;
+    width: 25%;
+    border-radius: 50%;
+    height: auto;
+    
+}*/
+
+
+/*-------------------------------------------------------------------*/
+/*-------------------------------------------------------------------*/
+/*para el modal de la revista*/
+.revistaFabrica{
+    background-color: #f0f0f0;
+}
+h3.tituloRevista{
+    font-size: 3em;
+    color: #000;
+    font-weight: 300;
+    letter-spacing: 3px;
+    margin-bottom: 1em;
+    text-align: center;  
+    text-transform: capitalize;
+    font-family: 'Federo', sans-serif;
+}
+/*para el modal de la revista*/
+.modal-content{
+    /*     padding-top: 40px;
+        padding-bottom: 40px;*/
+    height: 100%;
+    background: linear-gradient(#f36715,#eff0f2);
+    background: -o-linear-gradient(#f36715,#eff0f2);
+    background: -moz-linear-gradient(#f36715,#eff0f2);
+    background: -webkit-linear-gradient(#f36715,#eff0f2); 
+
+    /*color para el modal que contiene la revista*/
+}
+.modal-content h5{
+    color: #0f2453; /*color de la letra del modal*/
+    text-align: center;
+    font-size: 26px;
+    margin-bottom: .5em;
+    text-transform: uppercase;
+}
+.modal-content h5 span {
+    color: #FFF;
+
+}
+
+.modal-content h5 {
+    color: #000;
+    padding-top: 15px;
+    font-size: 22px;
+    letter-spacing: 1px;
+}
+
+
+
+.modal-header {
+    padding: 30px;
+}
+
+.modal-header h5{
+    padding: 30px;
+    font-family: 'Federo', sans-serif;
+}
+.modal-body h5 span{
+    color: #212020; /*color de las letras del cuadro del modal*/
+    font-size: 9.5px;
+    letter-spacing: .8px;
+    line-height: 32px;
+    padding-top: 10px;
+    word-spacing: .5px;
+
+}
+.modal-body h5{
+    color: #000;
+    padding-top: 15px;
+    font-size: 12px;
+    letter-spacing: 1px;
+    font-family: 'Lato', sans-serif;
+
+}
+.enlace{
+/*    height: 100%;
+    background: linear-gradient(#f36715,#eff0f2);
+    background: -o-linear-gradient(#f36715,#eff0f2);
+    background: -moz-linear-gradient(#f36715,#eff0f2);
+    background: -webkit-linear-gradient(#f36715,#eff0f2); 
+    width: 100px;
+    height: 70px;
+    color: #f36715;
+    text-align: center;
+    display: inline-block;*/
+    /*    position: relative;
+        margin-bottom: auto;
+        margin-left: 50%;
+        margin-right: -50%;*/
+
+}
+
+/*primero entro a la clase, y luego voy al hiperviculo*/
+.enlace a{
+    color: #0f2453; /*color de la letra del modal*/
+    text-align: center;
+    font-size: 26px;
+    margin-bottom: .5em;
+    text-transform: uppercase;
+    font-family: 'Lato', sans-serif;
+}
+.enlace a{
+    color: #000;
+    padding-top: 15px;
+    font-size: 18px;
+    letter-spacing: 1px;
+
+}
+
+
+.enlace a:hover{
+    background-color: #f36715;
+
+}
+.menu_modal2{
+    font-size: .9em;
+    font-weight: bold;
+    display: block;
+    padding: 1em;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-touch-callout: none;
+    -khtml-user-select: none;
+    -webkit-tap-highlight-color:rgba(237, 225, 230, .62);
+
+
+}
+
+
+@media(max-width:320px){
+    iframe{
+        width: 200px;
+        height: 400px;  
+    }
+}
+@media(max-width:375px){
+
+    iframe{
+        max-width: 200px;
+        max-height: 300px;
+
+    }
+}
+
+
+@media(max-width:384px){
+    iframe{
+        max-width: 200px;
+        max-height: 300px;
+
+    }
+}
+@media(max-width:414px){
+    iframe{
+        max-width: 200px;
+        max-height: 300px;
+
+    }
+}
+
+@media(max-width:480px){
+    iframe{
+        max-width: 200px;
+        max-height: 300px;
+
+    }
+}
+@media(max-width:568px){
+
+    iframe{
+        max-width: 200px;
+        max-height: 300px;
+
+    }
+}
+/*@media(max-width:600px){
+
+    @media(max-width:640px){
+        @media(max-width:667px){
+            @media(max-width:736px){
+                @media(max-width:767px){
+
+                    @media(max-width:768px){
+
+                        @media(max-width:800px){
+                            @media(max-width:900px){
+
+                                @media(max-width:991px){
+                                    @media(max-width:1024px){
+
+                                        @media(max-width:1050px){
+
+                                            @media(max-width:1280px){
+                                                @media(max-width:1366px){
+                                                    @media(max-width:1440px){
+                                                        @media(max-width:1600px){*/

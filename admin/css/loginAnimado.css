@@ -1,0 +1,165 @@
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+
+    background: url('../../images/4.JPG');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-size: cover; /*para que abarque el 100% de la pantalla*/
+    background-attachment: fixed; /*para que este estatico la imagen*/
+    font-family: 'Federo', sans-serif;
+
+    background-color: #f0f0f0;
+}
+
+.contenedor-form {
+    background-color: #ffffff;
+    max-width: 500px;
+    width: 100%;
+    margin: 48px auto;
+    border-radius: 5px;
+    color: #000;
+    position: relative;
+    /*padding: 40px;*/
+}
+
+.contenedor-form .toggle {
+    position: absolute;
+    top: 7px;
+    right: 7px;
+    width: 100px;
+    height: 30px;
+    font-size: 12px;
+    line-height: 25px;
+    text-align: center;
+    /*    border-top: 2px solid #f36715;
+        border-bottom: 2px solid #f36715;*/
+    cursor: pointer;
+    transition: all .5s ease;
+}
+
+.contenedor-form .toggle:hover {
+    border-top: 2px solid #FFF;
+    border-bottom: 2px solid #fff;
+}
+
+.contenedor-form .toggle span {
+    letter-spacing: 1px;
+}
+
+.contenedor-form h2 {
+    margin: 0 0 28px 0;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 1;
+}
+.contenedor-form input[type="text"],
+.contenedor-form input[type="password"],
+.contenedor-form input[type="email"] {
+    padding-left: 45px; /*para el texto de eso se vaya hacia la izquirda*/
+    width: 100%;
+    height: 44px;
+    margin-bottom: 20px;
+    font-size: 14px;
+    border: 1px solid #000;
+    padding-left: 45px;
+    display: block;
+    font-size: 14px;
+    font-weight:600;
+    background: rgba(0,0,0,.2);
+    color: #000;
+    margin: 0 0 20px 0;
+    border: none;
+    border-radius: 2px;
+    border-bottom: 4px solid #f36715;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+    transition: all .5s ease;
+}
+
+.contenedor-form input[type="text"]:focus,
+.contenedor-form input[type="password"]:focus,
+.contenedor-form input[type="email"]:focus {
+    border-bottom: 4px solid #fff;
+}
+.contenedor-form input[type="submit"] {
+    /*padding-left: 45px; para el texto de eso se vaya hacia la izquirda*/
+    width: 100%;
+    height: 44px;
+    margin-bottom: 20px;
+    font-size: 14px;
+    border: 1px solid #000;
+    display: block;
+    font-size: 14px;
+    font-weight:600;
+    background: #f36715;
+    margin: 0 0 20px 0;
+    border: none;
+    border-radius: 2px;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+    transition: all .5s ease;
+    cursor: pointer;
+}
+
+.contenedor-form input[type="submit"]:hover {
+    background: rgba(243, 103, 21, 0.4);
+
+
+}
+.contenedor-form .reset-password {
+    /*background:rgba(243, 103, 21, .5);*/
+    width: 100%;
+    padding: 15px 0;
+    text-align: center;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.contenedor-form .reset-password a {
+    color: #f36715;
+    text-decoration: none;
+    font-size: 16px;
+    /*text-align: center;*/
+
+}
+.contenedor-form .reset-password a:hover{
+    color: #000;
+
+
+}
+
+.contenedor-form .formulario {
+    display: none;
+    padding: 40px;
+}
+.contenedor-form .formulario h2{
+    color: #333;
+}
+
+/*para el color del glyficon*/
+.contenedor-form .formulario i{
+
+    position: absolute;
+    margin-right: 50px;
+    margin-top: 1px;
+    width: 44px;
+    height: 36px;
+    padding-top: 8px;
+    color: rgba(0,0,0,.2);
+
+}
+.cust1{
+    margin-left: 50px;
+
+}
+
+.contenedor-form .formulario:nth-child(2) {
+    display: block;
+}
