@@ -13,7 +13,7 @@
     <div class="popular">
         <h4 class="text-center"><i class="fas fa-star"></i>  Destacados</h4>
         <?php
-        $p_query = "SELECT * FROM posts WHERE status = 'publish' ORDER BY views DESC LIMIT 5";
+        $p_query = "SELECT * FROM posts WHERE status = 'publico' ORDER BY views DESC LIMIT 5";
         $p_run = mysqli_query($con, $p_query);
         if (mysqli_num_rows($p_run) > 0) {
             while ($p_row = mysqli_fetch_array($p_run)) {
@@ -49,7 +49,7 @@
     <div class="popular">
         <h4 class="text-center"><i class="fas fa-clock"></i>  Recientes</h4>
         <?php
-        $p_query = "SELECT * FROM posts WHERE status = 'publish' ORDER BY id DESC LIMIT 5";
+        $p_query = "SELECT * FROM posts WHERE status = 'publico' ORDER BY id DESC LIMIT 5";
         $p_run = mysqli_query($con, $p_query);
         if (mysqli_num_rows($p_run) > 0) {
             while ($p_row = mysqli_fetch_array($p_run)) {
