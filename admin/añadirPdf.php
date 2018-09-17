@@ -20,7 +20,7 @@ if (!isset($_SESSION['username'])) {
                     <h1><i class="fa fa-user-plus"></i> Agregar<small> Nuevo </small></h1><hr>
                     <ol class="breadcrumb">
                         <li><a href="index.php"><i class="fas fa-home"></i> Menú</a></li>
-                        <li class="active"><i class="fa fa-user-plus"></i> Nuevo Usuario</li>
+                        <li class="active"><i class="fa fa-user-plus"></i> Nuevo Documento</li>
                     </ol>
                     <?php
                     if (isset($_POST['subir'])) {
@@ -90,7 +90,7 @@ if (!isset($_SESSION['username'])) {
                                 </div>
 
                                 <input type="submit" value="Agregar D" name="subir" class="btn btn-primary">
-                                <a href="lista.php">lista</a>
+                                <!--<a href="listaAñadirPdf.php">lista</a>-->
                             </form>
                         </div>
                        

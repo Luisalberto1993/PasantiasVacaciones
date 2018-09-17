@@ -13,7 +13,10 @@ $num_of_rows = mysqli_num_rows($get_comment_run);
         <i class="fas fa-list-ul"></i> Noticias publicadas
     </a>
     <a href="añadirPdf.php" class="list-group-item">
-        <i class="fas fa-list-ul"></i> Publicar Documento
+        <i class="fas fa-file-upload"></i> Subir Documentos
+    </a>
+    <a href="listaAñadirPdf.php" class="list-group-item">
+        <i class="fas fa-eye"></i> Ver Documentos
     </a>
     <!--                      <a href="media.php" class="list-group-item">
                               <i class="fa fa-database"></i> Imágenes
@@ -35,14 +38,17 @@ $num_of_rows = mysqli_num_rows($get_comment_run);
         <a href="users.php" class="list-group-item">
             <i class="fa fa-users"></i> Usuarios Registrados
         </a>
-  
+
 
         <a href="Estadis_noticias.php" class="list-group-item">
             <i class="fas fa-chart-pie"></i>  Estadistístico Noticias</a>
         <a href="Estadis_Usuarios.php" class="list-group-item">
             <i class="fas fa-chart-bar"></i>  Estadístico Usuarios</a>
         <a href="reportePdf.php" class="list-group-item">
-            <i class="fas fa-print"></i> Reportes Pdf
+            <i class="fas fa-print"></i> Reportes Usuarios
+        </a>
+        <a href="reportePdfDocumentos.php" class="list-group-item">
+            <i class="fas fa-print"></i> Reportes Documentos
         </a>
     <?php } ?>
 </div>

@@ -1,6 +1,7 @@
 <?php
 ob_start();
 session_start();
+// header('content-type: application/pdf');
 require_once('../inc/db.php');
 ?>
 <!DOCTYPE html>

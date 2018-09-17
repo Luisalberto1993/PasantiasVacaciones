@@ -20,11 +20,11 @@ if (!isset($_SESSION['username'])) {
                     <h1><i class="fa fa-users"></i> Reportes <small>Ver todos</small></h1><hr>
                     <ol class="breadcrumb">
                         <li><a href="index.php"><i class="fas fa-home"></i> Menú</a></li>    
-                        <li class="active"><i class="fa fa-users"></i> Reporte de usuarios</li>
+                        <li class="active"><i class="fa fa-users"></i> Reporte de documentos</li>
                     </ol>
                     <div class="col-md-9">
                         <?php
-                        $h1 = "Reporte de Usuarios - 2018";
+                        $h1 = "Reporte Documentos - 2018";
                         echo '<h1>' . $h1 . '</h1>'
                         ?>
                     </div>
@@ -33,11 +33,10 @@ if (!isset($_SESSION['username'])) {
                     <table id="table table-hover">  
                         <thead>
                             <tr>  
-                                <th width="5%">ID</th>  
-                                <th width="30%">Fecha_ingreso</th>  
-                                <th width="10%">nombre</th>  
-                                <th width="45%">apellido</th>  
-                                <th width="10%">Usuario</th>  
+                                <th width="10%">ID</th>  
+                                <th width="30%">Título</th>  
+                                <th width="45%">Descripción</th>  
+                                <th width="15%">Nombre</th>  
                             </tr>  
                         </thead>
                         <tbody>
@@ -119,20 +118,20 @@ if (!isset($_SESSION['username'])) {
                     function fetch_data($con) {
                         $output = '';
 //    require_once('../inc/db.php'); para incluir la base Daos
-                        $sql = "SELECT * FROM `users`ORDER BY id ASC";
+                        $sql = "SELECT * FROM `tbl_documentos` ORDER BY id_documento";
                         $result = mysqli_query($con, $sql);
                         while ($row = mysqli_fetch_array($result)) {
-                            if ($row['role'] == 'admin') {
-                                $color = '#ffb33a';
-                            } else {
-                                $color = '#e5e3e3';
-                            }
-                            $output .= '<tr bgcolor="' . $color . '">
-                          <td>' . $row["id"] . '</td>  
-                          <td>' . $row["date"] . '</td>  
-                          <td>' . $row["first_name"] . '</td>  
-                          <td>' . $row["last_name"] . '</td>  
-                          <td>' . $row["username"] . '</td>  
+//                            if ($row['id'] == '2') {
+//                                $color = '#ffb33a';
+//                            } else {
+//                                $color = '#e5e3e3';
+//                            }
+//                            $output .= '<tr bgcolor="' . $color . '">
+                            $output .= '<tr>
+                          <td>' . $row["id_documento"] . '</td>  
+                          <td>' . $row["titulo"] . '</td>  
+                          <td>' . $row["descripcion"] . '</td>  
+                          <td>' . $row["nombre_archivo"] . '</td>  
                      </tr>  
                           ';
                         }
@@ -174,11 +173,11 @@ if (!isset($_SESSION['username'])) {
       <table border="1" cellpadding="5"> 
       <thead>
            <tr bgcolor="' . $color . '">  
-                <th>ID</th>  
-                <th>Fecha_ingreso</th>  
+ 
+<th>ID</th>  
+                <th>Título</th>  
+                <th>Descripción</th>  
                 <th>Nombre</th>  
-                <th>Apellido</th>  
-                <th>usuario</th>  
            </tr>
            </thead>
       ';
@@ -193,7 +192,7 @@ if (!isset($_SESSION['username'])) {
                         $obj_pdf->writeHTML($content, true, 0, true, 0);
                         ob_end_clean(); //rompimiento de pagina
                         $obj_pdf->lastPage();
-                        $obj_pdf->Output('Ejemplo.pdf', 'I');
+                        $obj_pdf->Output('documentos.pdf', 'I');
                     }
                     ?>  
 
