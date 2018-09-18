@@ -21,7 +21,7 @@ body#profile img#profile-image{
 }
 
 .tag-boxes .panel-primary{
-    border: 1px solid #f36715;
+    border: 1px solid #0075b0;
 }
 
 .tag-boxes .panel-red{
@@ -77,15 +77,15 @@ footer{
     color:white;
     height: 50px;
     line-height: 50px;
-    font-size: 12px;
+    font-size: 14px;
     position: absolute;
     bottom: 0;
     width: 100%;
 }
 
 footer a{
-    color:white;
-    font-weight: bold;
+    color:#333;
+    font-weight: 500;
 }
 
 footer a:hover{
@@ -113,38 +113,30 @@ footer a:hover{
     z-index: 200;
 
 }
-
+/*para el estilo del navbar en el panel de administracion*/
 .navbar{
-    background-color: rgb(243, 103, 21); 
-    border-color: #e5870d;
-    color: red !important;
-
-}
-.navbar-toggle{
-    background-color: rgb(243, 103, 21);
-
-}
-.navbar-brand{
-    background-color: rgb(243, 103, 21);
-}
-.navbar-collapse.navbar-right{
-    background-color: rgb(243, 103, 21);
-
-}
-.navbar-right{
-    background-color: rgb(243, 103, 21);  
-
-}
-.navbar-right a:hover,
-.navbar-right a:focus{
-    background-color: rgba(243, 103, 21, .7);  
-
+    background: #f36715;
+    border: white !important;
 }
 
-.navbar-default .navbar-collapse {
-    background-color: rgb(243, 103, 21);
-    border-color:rgb(243, 103, 21);
+.navbar-brand:link, .navbar-brand:visited{ /*para que funcione en todo lo que voy poniendo*/
+
+    color: #333 !important;
+}
+.navbar-brand:hover, .navbar-brand:active{ 
+
+    color: white !important;
 }
 
 
+#navbar li a:link, #navbar li a:visited{
+    color: white !important;
 
+}
+#navbar li a:hover, #navbar li a:active{
+
+    color: #333 !important;
+    background: #efa77c;
+
+}
+/*para el estilo del navbar en el panel de administracion*/

@@ -1,5 +1,5 @@
 <footer class="text-center">
-    Copyright &copy; by <a href="#">Luis Guanolema</a> desde 2018 - <?php echo date('Y'); ?>
+    Copyright &copy; by <a href="#">Fábrica Ideas </a> Espoch - <?php echo date('Y'); ?>
 </footer>
 </div>
 

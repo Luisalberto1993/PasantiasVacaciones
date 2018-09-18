@@ -56,7 +56,9 @@ if (isset($_POST['submit'])) {
     <body>
 
 
-
+        <div class="logo-identificador">
+            <img src="img/Logo.png">
+        </div>
 
         <div class="contenedor-form">
             <div class="toggle">

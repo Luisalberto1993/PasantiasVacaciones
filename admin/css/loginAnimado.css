@@ -5,17 +5,35 @@
     -moz-box-sizing: border-box;
     box-sizing: border-box;
 }
+/*para el logo de la fabrica*/
+.logo-identificador img{
+    width: 200px;
+    height: 100px;
+    margin-left:43%;
+    margin-top: 30px;
+    position: relative;
 
+}
+.logo-identificador img:hover{
+    color: red;
+    border-radius: 20px;
+    background-color: red;
+    box-shadow: 2px #f36715;
+
+}
+/*para el logo de la fabrica*/
 body {
 
-    background: url('../../images/4.JPG');
+    /*background: rgba(243, 103, 21, .8);*/
+    background: #a39a94;
+    /*background: url('../../images/4.JPG');*/
     background-repeat: no-repeat;
     background-size: cover;
     background-size: cover; /*para que abarque el 100% de la pantalla*/
     background-attachment: fixed; /*para que este estatico la imagen*/
     font-family: 'Federo', sans-serif;
 
-    background-color: #f0f0f0;
+/*    background-color: #f0f0f0;*/
 }
 
 .contenedor-form {
