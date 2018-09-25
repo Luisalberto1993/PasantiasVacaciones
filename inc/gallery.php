@@ -15,7 +15,7 @@
             <div class="textbox">
                 <h4>FÁBRICA IDEAS
                 </h4>
-                <p><img src="images/c4.jpg" class="img-rounded"></p>
+                <p><img src="img/Logo.png" class="img-rounded"></p>
             </div>
         </a>
     </div>

@@ -25,9 +25,10 @@ $(document).ready(function () {
                 $(".mensaje-alerta").html("No se pudo Enviar ...!!");
             }
         });
-        return false;
-    })
 
+        return false;
+      
+    })
 
 });
 

@@ -22,8 +22,8 @@
                     <div class="col-md-6 team-img-w3-agile">
                     </div>
                     <div class="col-md-6 team-Info-agileits">
-                        <h4>Luis G</h4>
-                        <span>Desarrollador
+                        <h4>Ing. Juan Aguilar Phd</h4>
+                        <span>Director
                         </span>
                         <p>xxxxxxxx.</p>
                         <div class="social-bnr-agileits footer-icons-agileinfo">
@@ -41,7 +41,7 @@
                     <div class="col-md-6 team-img-w3-agile">
                     </div>
                     <div class="col-md-6 team-Info-agileits">
-                        <h4>Joha rodirguez</h4>
+                        <h4>Joha rodriguez</h4>
                         <span>Secretaria
                         </span>
                         <p>xxxxxx.</p>	

@@ -45,9 +45,41 @@ if (!isset($_SESSION['username'])) {
                             ?>  
                         </tbody>
                     </table>  
-                    <br />  
+                    <br>  
 
                     <style>
+                        table{
+
+                            width: 100%;
+
+                        }
+                       
+                        #table,thead tr{
+
+                            background: #f0f0f0;
+                            font-weight: 600;
+                            
+                        }
+                        tr:hover{
+                            background: #DDD;
+                            
+                        }
+
+                        thead{
+                            font-weight: 600;
+                            font-size: 15px;
+                            margin-left: 45px;
+                            text-align: left;
+                        }
+                        #t{
+                            margin-left: 30px;
+                            font-size:12px;
+                            text-align: center;
+                            width: 600px;
+
+                        }
+
+
 
                         .contenedor-form{
 

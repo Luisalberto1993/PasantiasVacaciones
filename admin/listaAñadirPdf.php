@@ -28,6 +28,15 @@ if (!isset($_SESSION['username'])) {
                             <br>
                             <br>
                             <style>
+                                table{
+                                    width: 100%;
+                                    
+                                }
+                                th{
+                                    background: #f0f0f0;
+                                    
+                                }
+                                
                                 thead{
                                     font-weight: 600;
                                     font-size: 15px;
@@ -46,10 +55,15 @@ if (!isset($_SESSION['username'])) {
                             <table class="table-hover">
                                 <thead>
                                     <tr>
-                                        <td>Título</td>
-                                        <td>Descripción</td>
-                                        <td>Tipo</td>
-                                        <td>Nombre</td>
+
+                                        <!--<th width="5%">ID</th>-->  
+                                        <th width="30%">Título</th>  
+                                        <th width="30%">Descripción</th>  
+                                        <!--<th width="40%">Tipo</th>-->
+                                        <th width="40%">Documento</th>
+                                        
+                                        <!--<th width="10%">Nombre</th>-->  
+
                                     </tr>
                                 </thead>
                                 <?php
@@ -61,7 +75,7 @@ if (!isset($_SESSION['username'])) {
                                         <tr>
                                             <td><?php echo $datos['titulo']; ?></td>
                                             <td><?php echo $datos['descripcion']; ?></td>
-                                            <td><?php echo $datos['tipo']; ?></td>
+                                            
                                             <td><i class="fas fa-download" style=" color: #2fa4e7"></i> <a href="archivoAñadirPdf.php?id=<?php echo $datos['id_documento'] ?>"><?php echo $datos['nombre_archivo']; ?></a></td>
                                         </tr>
                                     </tbody>

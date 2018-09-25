@@ -49,7 +49,10 @@ if (!isset($_SESSION['username'])) {
                     <br />  
 
                     <style>
+                        tr:hover{
+                            background: #f0f0f0;
 
+                        }
                         .contenedor-form{
 
                             padding-left: 35%;  

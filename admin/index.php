@@ -4,7 +4,7 @@ if(!isset($_SESSION['username'])){
     header('Location: login.php');
 }
 
-$comment_tag_query = "SELECT * FROM comments WHERE status = 'pending'";
+$comment_tag_query = "SELECT * FROM comments WHERE status = 'pendiente'";
 $category_tag_query = "SELECT * FROM categories";
 $users_tag_query = "SELECT * FROM users";
 $posts_tag_query = "SELECT * FROM posts";

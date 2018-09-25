@@ -200,7 +200,7 @@ if (isset($_GET['post_id'])) {
                                     echo "<div class='alert alert-danger' style='color:red;><i class='fa fa-close'></i>$error_msg</div>";
 //                                    echo "<span style='color:red;' class='pull-right'>$error_msg</span>";
                                 } else if (isset($msg)) {
-                                    echo "<div class = 'alert alert-success' role = 'alert' style = 'color:green;'><i class='fa fa-close'></i>$msg</div>";
+                                    echo "<div class = 'alert alert-success' role = 'alert' style = 'color:green;'><i class='fas fa-check'></i>$msg</div>";
 //                                    echo "<span style='color:green;' class='pull-right'>$msg</span>";
                                 }
                                 ?>

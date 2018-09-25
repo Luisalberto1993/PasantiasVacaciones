@@ -106,7 +106,7 @@ if (isset($_POST['checkboxes'])) {
                             if (isset($_POST['reenviar'])) {
                                 $comment_data = $_POST['comment'];
                                 if (empty($comment_data)) {
-                                    $comment_error = "Must Fill This Feild";
+                                    $comment_error = "Debe llenar este campo";
                                 } else {
                                     $get_user_data = "SELECT * FROM users WHERE username = '$session_username'";
                                     $get_user_run = mysqli_query($con, $get_user_data);
@@ -121,7 +121,7 @@ if (isset($_POST['checkboxes'])) {
                                     $insert_comment_query = "INSERT INTO comments (date,name,username,post_id,email,image,comment,status) VALUES ('$date','$full_name','$session_username','$reply_id','$email','$image','$comment_data','aprobado')";
                                     if (mysqli_query($con, $insert_comment_query)) {
                                         $comment_msg = "Comentario ha sido enviado";
-                                        header('location: comments.php');
+                                        header('location: post.php');
                                     } else {
                                         $comment_error = "Comentario no ha sido enviado";
                                     }
@@ -177,9 +177,9 @@ if (isset($_POST['checkboxes'])) {
                             </div>
                             <?php
                             if (isset($error)) {
-                                echo "<span style='color:red;' class='pull-right'>$error</span>";
+                                echo "<span style='color:red;' class='pull-right'></i>$error</span>";
                             } else if (isset($msg)) {
-                                echo "<span style='color:green;' class='pull-right'>$msg</span>";
+                                echo "<span style='color:green;' class='pull-right'> </i>$msg</span>";
                             }
                             ?>
                             <table class="table table-bordered table-striped table-hover">

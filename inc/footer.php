@@ -20,9 +20,9 @@
 <script type="text/javascript" src="js/modal.js"></script>
 <script type="text/javascript" src="js/preload.js"></script>
 <script type="text/javascript" src="js/modalRevista.js"></script>
-<script type="text/javascript" src="js/EnviarMail.js"></script> <!--valiacion con ajax-->
-<script type="text/javascript" src="js/contact.js"></script> <!--valiacion cada campo-->
-<script type="text/javascript" src="js/contactValidar.js"></script><!--valiacion cada campo-->
+<script type="text/javascript" src="js/EnviarMail.js"></script> valiacion con ajax
+<!--<script type="text/javascript" src="js/contact.js"></script> valiacion cada campo
+<script type="text/javascript" src="js/contactValidar.js"></script>valiacion cada campo-->
 
 </body>
 </html>

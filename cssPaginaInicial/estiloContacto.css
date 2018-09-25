@@ -1,7 +1,7 @@
 
 /*para el fondo en la seccion contacto*/
 .contact{
-    background: url('../images/4.JPG');
+    /*background: url('../images/4.JPG');*/
     background-repeat: no-repeat;
     background-size: cover;
     background-size: cover; /*para que abarque el 100% de la pantalla*/

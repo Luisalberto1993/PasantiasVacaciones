@@ -29,8 +29,8 @@
                 </button>
 
                 <!--para el logo-->
-                <div class="col-xs-3"><img src="img/FABRICA DE IDEAS.svg" alt="Logo" width="120px" height="70px"></div>
-                <!--<h1><a class="navbar-brand" href="index.php"> Fábrica <span>Ideas</span><p class="logo_w3l_agile_caption">Has tu sueño ralidad</p></a></h1>-->
+                <!--<div class="col-xs-3"><img src="img/FABRICA DE IDEAS.svg" alt="Logo" width="120px" height="70px"></div>-->
+                <h1><a class="navbar-brand" href="index.php"> Fábrica <span></span><p class="logo_w3l_agile_caption">     ideas</p></a></h1>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1">
@@ -45,6 +45,7 @@
                         <!--para las publicaciones-->
                         <li class="menu__item"><a href="#contact" class="menu__link scroll">Contactos</a></li>
                         <li class="menu__item"><a href="Ayuda.php" class="menu__link" title="Ayuda"><i class="fas fa-question-circle"></i></a></li>
+                        <li class="menu__item"><a href="admin/registroUsuarios.php" class="menu__link" title="Resgistro"><i class="fa fa-user-plus"></i></a></li>
                         <li class="menu__item"><a href="admin/login.php" class="menu__link" title="Unirse"><i class="fas fa-sign-in-alt"></i></a></li>                        
                         <!--<li class="menu__item"><a href="admin/login.php" class="menu__link scroll"><i class="fas fa-sign-in-alt"></i></a></li>-->
                     </ul>
@@ -148,11 +149,10 @@
                 <h4>FÁBRICA 
                     <span>IDEAS</span></h4>
                 <img src="images/1.jpg" alt=" " class="img-responsive">
-                <h5>Sabemos que te gusta emprender</h5>
-                <p> Te ofrecemos lo mejor para que puedas salir adelante con tus emprendimientos 
-                    y los puedas hacer conocer al mundo y para eso podras obtener los mejores 
-                    asesores que hayas esperado tener en toda tu vida ven y forma parte del grupo del investigacion
-                    ..</p>
+                <h5>Objetivo</h5>
+                <p> Desarrollar la investigación científica en los campos del emprendimiento e innovación empresarial 
+                    que derive en divulgación científica de calidad, 
+                    como aporte para la generación del ecosistema emprendedor de la provincia y  la región 3.</p>
             </div>
         </div>
     </div>

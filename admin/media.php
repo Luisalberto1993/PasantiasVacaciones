@@ -63,16 +63,16 @@ if (!isset($_SESSION['username'])) {
                                         <img src="media/<?php echo $get_image; ?>" width="100%" alt="">
                                     </a>
                                 </div>
-        <?php
-    }
-} else {
-    echo "<center><h2>Imagen no disponible</h2></center>";
-}
-?>
+                                <?php
+                            }
+                        } else {
+                            echo "<center><h2>Imagen no disponible</h2></center>";
+                        }
+                        ?>
                     </div>
 
                 </div>
             </div>
         </div>
 
-<?php require_once('inc/footer.php'); ?>
+        <?php require_once('inc/footer.php'); ?>

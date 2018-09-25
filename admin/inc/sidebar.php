@@ -1,7 +1,7 @@
 <?php
 $session_role1 = $_SESSION['role'];
 
-$get_comment = "SELECT * FROM comments WHERE status = 'pending'";
+$get_comment = "SELECT * FROM comments WHERE status = 'pendiente'";
 $get_comment_run = mysqli_query($con, $get_comment);
 $num_of_rows = mysqli_num_rows($get_comment_run);
 ?>
@@ -11,6 +11,11 @@ $num_of_rows = mysqli_num_rows($get_comment_run);
     </a>
     <a href="posts.php" class="list-group-item">
         <i class="fas fa-list-ul"></i> Noticias publicadas
+    </a>
+   
+    
+    <a href="añadirInformación.php" class="list-group-item">
+        <i class="fas fa-list-ul"></i> añadir informacion
     </a>
     <a href="añadirPdf.php" class="list-group-item">
         <i class="fas fa-file-upload"></i> Subir Documentos
