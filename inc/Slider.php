@@ -29,8 +29,8 @@
                 </button>
 
                 <!--para el logo-->
-                <!--<div class="col-xs-3"><img src="img/FABRICA DE IDEAS.svg" alt="Logo" width="120px" height="70px"></div>-->
-                <h1><a class="navbar-brand" href="index.php"> Fábrica <span></span><p class="logo_w3l_agile_caption">     ideas</p></a></h1>
+                <div class="col-xs-3"><img src="img/logo1.png" alt="Logo" width="120px" height="70px"></div>
+                <!--<h1><a class="navbar-brand" href="index.php"> Fábrica <span></span><p class="logo_w3l_agile_caption">     ideas</p></a></h1>-->
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1">

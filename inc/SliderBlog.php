@@ -11,7 +11,7 @@
                 </button>
 
                 <!--para el logo-->
-                <div class="col-xs-3"><img src="img/FABRICA DE IDEAS.svg" alt="Logo" width="120px" height="70px"></div>
+                <div class="col-xs-3"><img src="img/logo1.png" alt="Logo" width="120px" height="70px"></div>
                 <!--<h1><a class="navbar-brand" href="index.php"> Información <span> Fábrica Ideas</span><p class="logo_w3l_agile_caption">Has tu sueño ralidad</p></a></h1>-->
 
             </div>
